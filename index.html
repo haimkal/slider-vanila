@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <h1>Slider</h1>
+    <div class="container">
+      <div class="arrows-and-image">
+        <img id="left-arrow" src="/Assets/leftArrow.png" alt="left-arrow" />
+
+        <div id="img-box">
+          <img
+            class="image active"
+            src="https://images.unsplash.com/photo-1640351960775-f729700e7754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            alt="Flower"
+          />
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1640513785948-088aeff9aa32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="lamp"
+          />
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1640505541901-7b654a6ebf9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="Playmobil"
+          />
+        </div>
+        <img id="right-arrow" src="/Assets/rightArrow.png" alt="right-arrow" />
+      </div>
+      <button id="delete-btn">X</button>
+      <div class="form-box">
+        <form>
+          <div>
+            <label for="imgUrl">Type URL</label>
+            <input name="imgUrl" type="url" />
+          </div>
+          <div>
+            <label for="imgDescription">Write description</label>
+            <input name="imgDescription" type="text" />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
