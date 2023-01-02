@@ -31,6 +31,7 @@ window.addEventListener('load', () => {
         switchImg(currentImg)
     })
 
+
     leftBtn.addEventListener('click', () => {
         currentImg--
         if (currentImg < 0) {
@@ -38,7 +39,6 @@ window.addEventListener('load', () => {
         }
         switchImg(currentImg)
     })
-
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -54,16 +54,15 @@ window.addEventListener('load', () => {
 
         imgBox.appendChild(newImage)
         imgArr = [...imgArr, newImage]
-
+        switchImg(currentImg)
     })
 
-    // function removeImg(index) {
-    //     // let imgArr = Array.from(document.getElementsByClassName('image'))
-    //     imgArr[index].classList.remove('active')
-    //     currentImg++
-    //     imgArr.splice(index, 1)
-
-
-    //     switchImg(currentImg)
-    // }
+    function removeImg(index) {
+        imgBox.removeChild(imgArr[index])
+        imgArr.splice(index, 1)
+        if (currentImg === imgArr.length) {
+            currentImg = 0
+        }
+        switchImg(currentImg)
+    }
 })
